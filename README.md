@@ -54,15 +54,22 @@ For workflow diagrams and ideas, see [AGENTIC_AI_WORKFLOW.md](AGENTIC_AI_WORKFLO
 
 ```mermaid
 flowchart LR
-  A[1) Input validation + rate limiting] --> B[2) Scanning\nZAP spider/AJAX/active\nFallback: basic HTTP scan]
-  B --> C[3) MCP structuring\nNormalize/dedupe alerts\nCreate analysis_key]
-  C --> D[4) OWASP mapping\nCWE to OWASP Top 10]
-  D --> E[5) AI analysis\nGemini/Groq\nStrict JSON schema\nRepresentative groups + expansion]
-  E --> F[6) Merge AI into findings\nDeveloper-ready fixes + verification]
-  F --> G[7) Report generation\nDOCX + JSON summary]
-  G --> H[8) Persistence\nSave scan + vulnerabilities]
-```
 
+A["1. Input Validation and Rate Limiting"]
+--> B["2. Scanning<br/>ZAP Spider / AJAX / Active Scan<br/>Fallback: Basic HTTP Scan"]
+
+B --> C["3. MCP Structuring<br/>Normalize and Deduplicate Alerts<br/>Create analysis_key"]
+
+C --> D["4. OWASP Mapping<br/>CWE to OWASP Top 10"]
+
+D --> E["5. AI Analysis<br/>Gemini / Groq<br/>Strict JSON Schema<br/>Representative Groups and Expansion"]
+
+E --> F["6. Merge AI Into Findings<br/>Developer-Ready Fixes and Verification"]
+
+F --> G["7. Report Generation<br/>DOCX and JSON Summary"]
+
+G --> H["8. Persistence<br/>Save Scan and Vulnerabilities"]
+```
 ### End-to-End Data Flow
 
 ```mermaid
